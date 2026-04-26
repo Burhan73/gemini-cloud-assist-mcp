@@ -1,6 +1,8 @@
 name: '🔀 Gemini Dispatch'
 
-on:
+on:on:
+  workflow_dispatch:
+  # Diğer mevcut tetikleyiciler (push vb.) burada kalabilir
   pull_request_review_comment:
     types:
       - 'created'
