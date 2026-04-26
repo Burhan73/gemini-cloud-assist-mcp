@@ -34,6 +34,8 @@ jobs:
     steps:
       - name: 'Print context for debugging'
         env:
+           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+           GEMINI_CLI_TRUST_WORKSPACE: true  # Bunu tam buraya ekle
           DEBUG_event_name: '${{ github.event_name }}'
           DEBUG_event__action: '${{ github.event.action }}'
           DEBUG_event__comment__author_association: '${{ github.event.comment.author_association }}'
